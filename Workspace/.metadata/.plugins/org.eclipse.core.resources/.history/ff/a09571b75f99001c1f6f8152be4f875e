@@ -1,0 +1,16 @@
+package com;
+
+public class Task3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//String []allTask = {"A","C","B","D","E"};
+	String task1 = "A";
+	String task2 = "A";
+	String task3 = "B";
+	String task4 = "E";
+	String task5 = "M";
+	System.out.println(task2.compareTo(task1));
+	}
+
+}
