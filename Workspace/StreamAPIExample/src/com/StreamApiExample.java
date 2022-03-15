@@ -20,8 +20,9 @@ public class StreamApiExample {
 		//boolean res = listOfStd.stream().allMatch(v->v.startsWith("R"));
 		//System.out.println(res);
 		//listOfStd.stream().skip(3).forEach(v->System.out.println(v));
-		List<String> listOfNames = listOfStd.stream().filter(v->v.contains("ee")).collect(Collectors.toList());
-		System.out.println("Number of names "+listOfNames.size());
+		
+		//List<String> listOfNames = listOfStd.stream().filter(v->v.contains("ee")).collect(Collectors.toList());
+		//System.out.println("Number of names "+listOfNames.size());
 	}
 
 }
