@@ -5,7 +5,124 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-03-22T12:06:36Z</updated>
+  <updated>2022-03-23T07:00:00Z</updated>
+  <entry>
+    <title>Spring Tips:</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/23/spring-tips" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-03-23:4740</id>
+    <updated>2022-03-23T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment we look at how to use Spring&amp;rsquo;s &lt;code&gt;AbstractRoutingDataSource&lt;/code&gt; to build multi-tenant JDBC database code. &lt;/p&gt;
+&lt;p&gt;code: &lt;a href="https://github.com/spring-tips/multitenant-jdbc"&gt;https://github.com/spring-tips/multitenant-jdbc&lt;/a&gt;&lt;br/&gt;speaker: &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hjJ6ODxgYqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&amp;lt;/iframe&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - March 22nd, 2022 (Java 18 Edition!)</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/22/this-week-in-spring-march-22nd-2022-java-18-edition" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-03-22:4739</id>
+    <updated>2022-03-22T20:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Spring time is here! Astrologically and meteorlogically, speaking, of course. I love this season. Longer days, greener grass, bluer skies, and more. Next week, my family and I are headed to Hawaii for some much-needed R&amp;amp;R while my daughter has a week off from school. (It&amp;rsquo;s hard to believe she might be going to college in another state in 18 short months! We need all the family vacations we can get together! T_T) &lt;/p&gt;
+&lt;p&gt;As always, we&amp;rsquo;ve got a lot to look at today, so let&amp;rsquo;s dive right into it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;First thing: &lt;a href="https://www.oracle.com/news/announcement/oracle-releases-java-18-2022-03-22/"&gt;Java 18 was released today&lt;/a&gt;! There are a ton new features, including UTF-8 by default, a simple HTTP server, a reimplementation of core reflection to use method handles, an SPI for internet resolution, an easier JavaDoc attribute to simplify the inclusion of code snippets in JavaDoc comments, and previews of a bunch of amazing new features including pattern matching for switch, Project Panama, the new Vector API (as in matrix multiplication, not a collection, exactly). There&amp;rsquo;s also a switch you can use to disable finialization and finalizers, which you might want to try now to see if your application continues to do the right thing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/springgraphql/status/1506359922157670414?s=21"&gt;The Spring for GraphQL project has a Twitter account (@SpringGraphQL)!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/17/a-bootiful-podcast-elastic-s-felix-barnsteiner-on-apm-for-spring-developers"&gt;A Bootiful Podcast: Elastic&amp;rsquo;s Felix Barnsteiner on APM for Spring Developers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bell-sw.com/announcements/2021/09/02/BellSoft-VMware/"&gt;BellSoft is excited to announce its new agreement with VMware.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/03/16/meet-our-contributors-au-nz-ep-02/"&gt;Blog: Meet Our Contributors - APAC (Aus-NZ region)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=SFcAdJNGDOw"&gt;I was happy to be on the Kong podcast to talk about how Spring changed Java application development&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3"&gt;Initial AOT support in Spring Framework 6.0.0-M3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://openjdk.java.net/projects/jdk/18/"&gt;JDK 18&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://netty.io/news/2022/03/17/5-0-0-Alpha1.html"&gt;Netty 5.0.0.Alpha1 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/SimonHarmonicMinor/sneaky-java"&gt;SimonHarmonicMinor/sneaky-java: Java utilities to throw checked exceptions in a &amp;ldquo;sneaky&amp;rdquo; way.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/21/spring-data-2022-0-0-m2-2021-2-0-m4-2021-1-3-and-2021-0-10-released"&gt;Spring Data 2022.0.0-M2, 2021.2.0-M4, 2021.1.3, and 2021.0.10 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/17/spring-framework-6-0-0-m3-and-5-3-17-available-now"&gt;Spring Framework 6.0.0-M3 and 5.3.17 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-security-6-0-0-m3-and-5-7-0-m3-available-now"&gt;Spring Security 6.0.0-M3 and 5.7.0-M3 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/16/spring-tips-spring-shell-and-spring-native"&gt;Spring Tips: Spring Shell and Spring Native&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/16/spring-tools-4-14-0-released"&gt;Spring Tools 4.14.0 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/22/spring-for-graphql-1-0-milestone-6-released"&gt;Spring for GraphQL 1.0 Milestone 6 Released&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 6.0.0-M3 and 5.7.0-M3 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/22/spring-security-6-0-0-m3-and-5-7-0-m3-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Steve Riesenberg</name>
+    </author>
+    <id>tag:spring.io,2022-03-22:4738</id>
+    <updated>2022-03-22T18:30:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Security &lt;code&gt;6.0.0-M3&lt;/code&gt; and &lt;code&gt;5.7.0-M3&lt;/code&gt; are available now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This third 6.0 milestone covers build and release enhancements as well as the &lt;a href="https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter"&gt;deprecation of &lt;code&gt;WebSecurityConfigurerAdapter&lt;/code&gt;&lt;/a&gt; that was already released with &lt;code&gt;5.7.0-M2&lt;/code&gt;. The third 5.7 milestone covers several enhancements to SAML 2.0 and OAuth 2.0 support as well as a change to &lt;a href="https://github.com/spring-projects/spring-security/issues/10903"&gt;use UTF-8 by default for HTTP Basic credentials&lt;/a&gt; in Spring WebFlux.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For the release changes, please refer to the &lt;a href="https://github.com/spring-projects/spring-security/releases"&gt;releases page&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring for GraphQL 1.0 Milestone 6 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/03/22/spring-for-graphql-1-0-milestone-6-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rossen Stoyanchev</name>
+    </author>
+    <id>tag:spring.io,2022-03-22:4737</id>
+    <updated>2022-03-22T18:28:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of everyone involved, I&amp;rsquo;m pleased to announce the availability of the sixth and final milestone of Spring for GraphQL on the way to 1.0. Our next stop is RC1 in 4 weeks, followed by the GA on May 17.&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphql-client" class="anchor" name="graphql-client"&gt;&lt;/a&gt;GraphQL Client&lt;/h3&gt;
+&lt;p&gt;A GraphQL client is something we identified as a goal quite early on. It&amp;rsquo;s issue number 10 from 336 at present in the issue tracker, but we viewed testing support as higher priority and so the &lt;a href="https://docs.spring.io/spring-graphql/docs/current-SNAPSHOT/reference/html/#testing"&gt;GraphQL Tester&lt;/a&gt; came first and has been available from the start.&lt;/p&gt;
+&lt;p&gt;The Tester did prove valuable and popular, but we knew we had to fully explore the client before 1.0 as the two are closely related but have slightly different perspectives, and we wanted to make sure they&amp;rsquo;re aligned with each other.&lt;/p&gt;
+&lt;p&gt;A second point is that the Tester has supported testing subscriptions on the server side, but not over WebSocket. This was important to explore since unlike HTTP where one GraphQL request maps to one HTTP request, in Websocket, many GraphQL requests share the same connection which is a fundamentally different mode of operation. For example the WebSocket transport needs to connect transparently when a request is made, ensure a single, shared connection, manage its lifecycle, and as a long lived connection, provide controls for starting and stopping.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m happy to say that milestone 6 includes a GraphQL Client. It supports single response requests (queries and mutations) over HTTP, and subscriptions along with queries and mutations over WebSocket.&lt;/p&gt;
+&lt;p&gt;Some example usage:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint Java"&gt;String document = &amp;quot;{&amp;quot; +&#xD;
+        &amp;quot;  project(slug:\&amp;quot;spring-framework\&amp;quot;) {&amp;quot; +&#xD;
+        &amp;quot;   name&amp;quot; +&#xD;
+        &amp;quot;   releases {&amp;quot; +&#xD;
+        &amp;quot;     version&amp;quot; +&#xD;
+        &amp;quot;   }&amp;quot;+&#xD;
+        &amp;quot;  }&amp;quot; +&#xD;
+        &amp;quot;}&amp;quot;;&#xD;
+&#xD;
+Mono&amp;lt;Project&amp;gt; projectMono = graphQlClient.document(document)&#xD;
+        .retrieve(&amp;quot;project&amp;quot;)&#xD;
+        .toEntity(Project.class);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The response data is decoded to a &lt;code&gt;Project&lt;/code&gt;. The request document can also be stored in a file and referred to by a simple name (e.g. &amp;ldquo;project&amp;rdquo;), or you can create it through a code generated request such as the &lt;code&gt;GraphQLQueryRequest&lt;/code&gt; from &lt;a href="https://netflix.github.io/dgs/generating-code-from-schema/#generating-client-apis"&gt;Netflix DGS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some example usage for a subscription:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint Java"&gt;Flux&amp;lt;String&amp;gt; projectFlux = client.document(&amp;quot;subscription { projects { name } }&amp;quot;)&#xD;
+        .retrieveSubscription(&amp;quot;projects&amp;quot;)&#xD;
+        .toEntity(Project.class);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is lots more to discover. Please, see the new &lt;a href="https://docs.spring.io/spring-graphql/docs/current-SNAPSHOT/reference/html/#client"&gt;Client section&lt;/a&gt; in the reference documentation.&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphql-tester" class="anchor" name="graphql-tester"&gt;&lt;/a&gt;GraphQL Tester&lt;/h3&gt;
+&lt;p&gt;The GraphQL Tester has been updated to align with the new client. The two share the underlying contract for a GraphQL transport, and as a result the Tester now also supports WebSocket.&lt;/p&gt;
+&lt;p&gt;Some parts of the API have changed, in part to align with the client, but also for other reasons such as to use correct terminology and avoid overloaded use of &lt;code&gt;query&lt;/code&gt; among others. See &lt;a href="https://github.com/spring-projects/spring-graphql/issues/310"&gt;this issue&lt;/a&gt; and links for more details.&lt;/p&gt;
+&lt;p&gt;One noteworthy API change is the use of a dedicated type to represent a GraphQL error which also exposes the error path as a &amp;ldquo;.&amp;rdquo; separated String (e.g. &amp;ldquo;project.name&amp;rdquo;) which makes it quite easy to check expected field errors&lt;br/&gt;via String comparison.&lt;/p&gt;
+&lt;p&gt;The choice for inspecting response data at a given JSON path have also been narrowed down to provide more guidance and focus on what matters. These include the &lt;code&gt;hasValue&lt;/code&gt;, &lt;code&gt;isNull&lt;/code&gt;, and &lt;code&gt;doesNotExist&lt;/code&gt; for a field, and that&amp;rsquo;s in addition to the option to decode to a higher level object for further assertion. &lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-security" class="anchor" name="spring-security"&gt;&lt;/a&gt;Spring Security&lt;/h3&gt;
+&lt;p&gt;Spring Security users will be familiar with &lt;code&gt;@AuthenticationPincipal&lt;/code&gt; annotation, which you can now use on method parameter of a &lt;code&gt;@SchemaMapping&lt;/code&gt; method in a data controller. This provides access to the &lt;code&gt;Principal&lt;/code&gt; from Spring Security&amp;rsquo;s authentication.&lt;/p&gt;&lt;h3&gt;&lt;a href="#argument-binding" class="anchor" name="argument-binding"&gt;&lt;/a&gt;Argument Binding&lt;/h3&gt;
+&lt;p&gt;So far you&amp;rsquo;ve been able to use &lt;code&gt;@Argument&lt;/code&gt; to bind a specific argument onto an object of your choice. You can now use &lt;code&gt;@Arguments&lt;/code&gt; to bind the full arguments map onto an object.&lt;/p&gt;
+&lt;p&gt;A GraphQL argument can be a complex input type with nested objects or lists of nested objects. The argument binding feature supports mapping this onto a matching Java object structure, including support for constructor and property initialization, along with type conversion for scalar values. This makes it a challenge to work with conversion and other initialization errors that may&lt;br/&gt;occur at any level. &lt;/p&gt;
+&lt;p&gt;Argument binding now raises &lt;code&gt;BindException&lt;/code&gt; with all accumulated errors. The binding algorithm now does not give up at the fist error, but continues and accumulates as many errors as possible. Each error contains a &lt;code&gt;field&lt;/code&gt; property that is a &amp;ldquo;.&amp;rdquo; separate path to the argument where the error occurred. &lt;/p&gt;&lt;h3&gt;&lt;a href="#api-changes" class="anchor" name="api-changes"&gt;&lt;/a&gt;API Changes&lt;/h3&gt;
+&lt;p&gt;This release includes a number of API changes. In most cases those changes should be straight forward to address, and not difficult to address. Much of those have been driven by the introduction of the client to ensure symmetry and consistent naming between client and server. &lt;/p&gt;
+&lt;p&gt;This is expected to be the last such major round of changes. The RC1 release should be fairly quite in terms of backwards compatible changes and the APIs stable thereafter.&lt;/p&gt;&lt;h3&gt;&lt;a href="#boot-starter" class="anchor" name="boot-starter"&gt;&lt;/a&gt;Boot Starter&lt;/h3&gt;
+&lt;p&gt;The Spring for GraphqL Boot starter which now lives in Spring Boot proper has followed all the changes. The latest Spring Boot 2.7 snapshots are up-to-date and 2.7 M3 release is due this week on Thursday.&lt;/p&gt;&lt;h3&gt;&lt;a href="#community" class="anchor" name="community"&gt;&lt;/a&gt;Community&lt;/h3&gt;
+&lt;p&gt;Last but not least, thanks for the continued feedback and discussions in the Spring for GraphQL issue tracker. We really appreciate it as it makes the project stronger and better!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Initial AOT support in Spring Framework 6.0.0-M3</title>
     <link rel="alternate" href="https://spring.io/blog/2022/03/22/initial-aot-support-in-spring-framework-6-0-0-m3" />
@@ -374,86 +491,6 @@
     <updated>2022-03-02T08:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, we look at database migrations with the very popular Liquibase database migration library and how you can use it in the context of a Spring Boot application (and in a GraalVM native image)&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/YhicwD489xQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - March 1st, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/01/this-week-in-spring-march-1st-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-01:4719</id>
-    <updated>2022-03-01T18:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a lot to cover this week so let&amp;rsquo;s get right into it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/24/a-bootiful-podcast-infoq-editor-and-java-champion-dr-alex-blewitt"&gt;A Bootiful Podcast: InfoQ editor and Java Champion, Dr. Alex Blewitt&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.linkedin.com/learning/advanced-spring-spring-boot-actuator?trk=share_ios_course_learning&amp;shareId=6Of"&gt;Advanced Spring: Spring Boot Actuator Online Class&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/@dhakresumitra5/graphql-with-spring-boot-java-d2fa3ca1b12c"&gt;GraphQL with Spring Boot java&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=5--tDQIMqhY"&gt;Leverage Java 17 New Features to Create Your Wordle Checker - JEP Café #10&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/micrometerio/status/1494044523596451846"&gt;We&amp;rsquo;ve just released Micrometer 1.7.9, 1.8.3, 1.9.0-M3, 2.0.0-M2, Micrometer Tracing 1.0.0-M2, and Micrometer Docs Generator 1.0.0-M1 &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/24/spring-boot-2-5-10-available-now"&gt;Spring Boot 2.5.10 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/24/spring-boot-2-6-4-available-now"&gt;Spring Boot 2.6.4 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/24/spring-boot-2-7-0-m2-available-now"&gt;Spring Boot 2.7.0-M2 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/01/spring-cloud-gateway-cve-reports-published"&gt;Spring Cloud Gateway CVE reports published&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/01/spring-native-0-11-3-available-now"&gt;Spring Native 0.11.3 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/23/spring-session-2021-0-5-and-2021-1-2-released"&gt;Spring Session 2021.0.5 and 2021.1.2 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/25/spring-shell-2-1-0-m3-is-now-available"&gt;Spring Shell 2.1.0-M3 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/02/23/spring-tips-easy-iot-integration-with-hivemq-spring-integration-mqtt-and-spring-native"&gt;Spring Tips: easy IOT integration with HiveMQ, Spring Integration MQTT, and Spring Native&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/toedter/spring-hateoas-jsonapi/"&gt;&lt;code&gt;toedter/spring-hateoas-jsonapi&lt;/code&gt;: A JSON:API media type implementation for Spring HATEOAS&lt;/a&gt; has a new release!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Gateway CVE reports published</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/01/spring-cloud-gateway-cve-reports-published" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Spencer Gibb</name>
-    </author>
-    <id>tag:spring.io,2022-03-01:4718</id>
-    <updated>2022-03-01T17:50:29Z</updated>
-    <content type="html">&lt;p&gt;Two vulnerabilities in Spring Cloud Gateway have been identified and fixed. Versions 3.1.1 and 3.0.7 were &lt;a href="https://spring.io/blog/2022/02/18/spring-cloud-2021-0-1-has-been-released"&gt;released&lt;/a&gt; to address the vulnerabilities. Please see the CVE reports below for specific upgrade and mitigation instructions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22947"&gt;CVE-2022-22947&lt;/a&gt;: Spring Cloud Gateway Code Injection Vulnerability&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22946"&gt;CVE-2022-22946&lt;/a&gt;: Spring Cloud Gateway HTTP2 Insecure TrustManager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Spring Cloud users should upgrade to 2021.0.1 (which includes 3.1.1) or for 2020.0.x users should upgrade Spring Cloud Gateway to 3.0.7.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Native 0.11.3 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/01/spring-native-0-11-3-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Sébastien Deleuze</name>
-    </author>
-    <id>tag:spring.io,2022-03-01:4717</id>
-    <updated>2022-03-01T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Native &lt;code&gt;0.11.3&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/release"&gt;https://repo.spring.io/release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects-experimental/spring-native/releases/tag/0.11.3"&gt;25 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt; with GraalVM 22.0, Spring Boot 2.6.4 and Spring Cloud 2021.0.1. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-native"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects-experimental/spring-native/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-native/docs/0.11.3/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Shell 2.1.0-M3 is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/02/25/spring-shell-2-1-0-m3-is-now-available" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2022-02-25:4715</id>
-    <updated>2022-02-25T14:03:02Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Shell &lt;code&gt;2.1.0-M3&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Notable changes include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Usual small fixes&lt;/li&gt;
-  &lt;li&gt;UI Component model&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/50398/155499580-6353733b-6bd9-4993-917f-1e7b355a4b06.svg" alt="screencast" /&gt;&lt;/p&gt;
-&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-shell/releases/tag/v2.1.0-M3"&gt;release notes&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-shell/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-shell/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-shell/docs/2.1.0-M2/site/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
