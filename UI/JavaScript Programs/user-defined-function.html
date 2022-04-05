@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function info() {
+            alert("User-defined function")
+        }
+        function add(a,b){
+            var sum = a+b;
+            alert("Sum of two number is "+sum);
+        }
+        function sayHello(name){
+            return "Welcome user "+name;
+        }
+        function empInfo(id,name,salary,desg){
+            if(desg=="Manager"){
+                return salary+5000;
+            }else if(desg=="Programmer"){
+                return salary+3000;
+            }else {
+                return "No Bonus only salary "+salary;
+            }
+        }
+        function empInfo(){
+            alert("Hi")     
+        }
+        function getNumber() {
+            return 100;
+        }
+        //info();
+    </script>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // info();
+        // add(10,20);
+        // add(100,200);
+        // var result = sayHello("Ravi");
+        // alert("In main script "+result);
+        // var updateSalary = empInfo(100,"Raj",45000,"Tester");
+        // alert(updateSalary)
+        alert(getNumber())
+    </script>
+</body>
+</html>
