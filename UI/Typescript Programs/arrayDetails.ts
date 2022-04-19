@@ -17,8 +17,8 @@
 // console.log(stdNames)
 
 let num1:Array<number>=[10,20,30,40];
-let num2 = num1.slice();
-let num3 = num1;
+let num2 = num1.slice()        // copy value in another array  shallow copy 
+let num3 = num1;            // same memory like a reference or pointer Deep copy  
 console.log(num1)
 console.log(num2)
 console.log(num3);
@@ -26,4 +26,9 @@ num1.push(100);
 console.log(num1)
 console.log(num2)
 console.log(num3);
+
+
+
+
+
 
