@@ -1,0 +1,21 @@
+var id1 = 100;
+//id1="Ravi";
+var name1 = "Ravi Kumar";
+var res1 = true;
+var msg1 = "Welcome";
+msg1 = 100;
+msg1 = true;
+var id2 = 200; // base upon the it consider that type of data types. 
+var name2 = "Ajay Kumar";
+var res2 = false;
+var msg2 = "Welcome";
+id2 = "Ramesh";
+var id3;
+var name3;
+var res3;
+id3 = 300;
+name3 = "Mahesh";
+res3 = false;
+console.log(id1);
+console.log(name3);
+console.log(res3);
