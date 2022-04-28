@@ -1,0 +1,44 @@
+<div>
+    <h2>Structure directive</h2>
+    <h3>ngIf</h3>
+    <p>This is first para</p>
+    <p *ngIf="true">This is second para</p>
+    <p *ngIf="false">This is third para</p>
+    <p *ngIf="f1">This is fourth para</p>
+    <p *ngIf="f2">This is fifth para</p>
+    <input type="button" value="click here" (click)="changevalue()"/>
+    <div *ngIf="f3">
+        Welcome to Angular Training
+    </div>
+    <br/>
+    <input type="button" [value]="b1" (click)="toggle()"/>
+    <div *ngIf="flag">
+            Welcome to Full Stack Training
+    </div>
+    <br/>
+    <h3>ngFor</h3>
+    <p>All Student names are {{names}}</p>
+    <p *ngFor="let name of names">{{name}}</p>
+    <h3>All Student names</h3>
+    <ul>
+        <li *ngFor="let std of names"><b>{{std}}</b></li>
+    </ul>
+    <br/>
+    <p>Employee details {{emp}}</p>
+    <p>Employee id is {{emp.id}} Name is {{emp.name}} and age is {{emp.age}}</p>
+    
+    <h2>Employee Details </h2>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+        </tr>
+    </table>
+</div>
+
