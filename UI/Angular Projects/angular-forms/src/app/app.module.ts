@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
-import { AttributeDirecrictiveComponent } from './attribute-direcrictive/attribute-direcrictive.component';
+import { TdfLoginPageComponent } from './tdf-login-page/tdf-login-page.component';
+import { MdfLoginPageComponent } from './mdf-login-page/mdf-login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StructureDirectiveComponent,
-    AttributeDirecrictiveComponent
+    TdfLoginPageComponent,
+    MdfLoginPageComponent
   ],
   imports: [
     BrowserModule,FormsModule
