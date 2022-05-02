@@ -2,10 +2,22 @@
     <h2>Login page created using template driven form</h2>
     <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
         <label>Email</label>
-            <input type="email" name="email" ngModel/><br/>
+            <input type="email" name="email" ngModel required minlength="3"/>
+            <div *ngIf="loginRef.controls['email'].invalid && (loginRef.controls['email'].dirty || 
+            loginRef.controls['email'].touched) ">
+        <span [hidden]="!loginRef.controls['email'].errors?.['required']" style="color:red;">User Name is required</span> 
+        <span [hidden]="!loginRef.controls['email'].errors?.['minlength']" style="color:red;">UserName must contains 3 character</span>
+            </div>
+            <br/>
         <label>Password</label>
-            <input type="password" name="password" ngModel/><br/>
-        <input type="submit" value="submit"/>
+            <input type="password" name="password" ngModel required minlength="4"/>
+            <div *ngIf="loginRef.controls['password'].invalid && (loginRef.controls['password'].dirty || 
+            loginRef.controls['password'].touched) ">
+        <span [hidden]="!loginRef.controls['password'].errors?.['required']" style="color:red;">Password is required</span> 
+        <span [hidden]="!loginRef.controls['password'].errors?.['minlength']" style="color:red;">Password must contains 4 character</span>
+            </div>
+            <br/>
+        <input type="submit" value="submit" [disabled]="loginRef.invalid"/>
         <input type="reset" value="reset"/>
     </form>
     <span style="color:red;">{{msg}}</span>
