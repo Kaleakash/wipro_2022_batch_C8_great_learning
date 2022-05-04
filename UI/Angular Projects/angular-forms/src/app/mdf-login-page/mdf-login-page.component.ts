@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CustomService } from '../custom.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-mdf-login-page',
@@ -9,21 +11,27 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class MdfLoginPageComponent implements OnInit {
   
   loginRef  = new FormGroup({
-    email:new FormControl(),
-    pass:new FormControl()
+                            // it is equal to required attribute in html page 
+    email:new FormControl("",[Validators.required,Validators.minLength(3)]),
+    password:new FormControl("",[Validators.required,Validators.pattern("[a-z]+@[a-d,0-9]+")])
   });
   msg:string ="";
-  constructor() { }
+  constructor(public ls:LoginService) { }   // DI for service class
 
   ngOnInit(): void {
   }
 
   checkUser() {
     let login = this.loginRef.value;
-    if(login.email=="Raj@gmail.com" && login.pass=="123"){
-      this.msg = "Successfull login";
-    }else {
-        this.msg  = "Failure try once again";
-    }
+    // let obj = new CustomService();
+    // this.msg = obj.checkUserDetails(login);
+    
+    this.msg = this.ls.checkUserDetails(login);
+
+  //   if(login.email=="Raj@gmail.com" && login.pass=="123"){
+  //     this.msg = "Successfull login";
+  //   }else {
+  //       this.msg  = "Failure try once again";
+  //   }
   }
 }

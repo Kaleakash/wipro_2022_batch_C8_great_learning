@@ -10,11 +10,11 @@
             </div>
             <br/>
         <label>Password</label>
-            <input type="password" name="password" ngModel required minlength="4"/>
+            <input type="password" name="password" ngModel required pattern="[a-d]+@[0-9]+"/>
             <div *ngIf="loginRef.controls['password'].invalid && (loginRef.controls['password'].dirty || 
             loginRef.controls['password'].touched) ">
         <span [hidden]="!loginRef.controls['password'].errors?.['required']" style="color:red;">Password is required</span> 
-        <span [hidden]="!loginRef.controls['password'].errors?.['minlength']" style="color:red;">Password must contains 4 character</span>
+        <span [hidden]="!loginRef.controls['password'].errors?.['pattern']" style="color:red;">Pattern must be match</span>
             </div>
             <br/>
         <input type="submit" value="submit" [disabled]="loginRef.invalid"/>

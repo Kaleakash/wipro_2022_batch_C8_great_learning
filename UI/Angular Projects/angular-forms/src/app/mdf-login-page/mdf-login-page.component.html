@@ -2,9 +2,21 @@
     <h2>Login Page using Model Driven Form or Reactive Form</h2>
     <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
         <label>EmailId</label>
-        <input type="email" formControlName="email"/><br/>
+        <input type="email" formControlName="email"/>
+        <div *ngIf="loginRef.controls['email'].invalid && (loginRef.controls['email'].dirty || 
+            loginRef.controls['email'].touched) ">
+        <span [hidden]="!loginRef.controls['email'].errors?.['required']" style="color:red;">User Name is required</span> 
+        <span [hidden]="!loginRef.controls['email'].errors?.['minlength']" style="color:red;">UserName must contains 3 character</span>
+            </div>
+        <br/>
         <label>Password</label>
-        <input type="password" formControlName="pass"/><br/>
+        <input type="password" formControlName="password"/>
+        <div *ngIf="loginRef.controls['password'].invalid && (loginRef.controls['password'].dirty || 
+            loginRef.controls['password'].touched) ">
+        <span [hidden]="!loginRef.controls['password'].errors?.['required']" style="color:red;">Password is required</span> 
+        <span [hidden]="!loginRef.controls['password'].errors?.['pattern']" style="color:red;">Pattern must be match</span>
+            </div>
+        <br/>
         <input type="submit" value="submit"/>
         <input type="reset" value="reset"/>
     </form>
