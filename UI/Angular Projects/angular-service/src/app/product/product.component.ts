@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product';
 import { ProductService } from '../product.service';
 
 @Component({
@@ -8,12 +9,14 @@ import { ProductService } from '../product.service';
 })
 export class ProductComponent implements OnInit {
 
+  products:Array<Product>=[];
+
   constructor(public ps:ProductService) { }   // di for ProductService 
 
   ngOnInit(): void {
   }
 
   loadProductInfo() {
-    this.ps.loadProductData();
+    this.ps.loadProductData().subscribe(result=>this.products=result,error=>console.log(error),()=>console.log("done"));
   }
 }

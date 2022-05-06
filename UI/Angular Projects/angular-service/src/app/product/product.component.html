@@ -1,4 +1,11 @@
 <div>
     <input type="button" value="Load Product Data"
     (click)="loadProductInfo()"/>
+    <br/>
+    <div *ngFor="let product of products">
+        <div>Id is {{product.id}}
+
+            <img src={{product.image}} width="200px" height="200px"/>
+        </div>            
+    </div>
 </div>
