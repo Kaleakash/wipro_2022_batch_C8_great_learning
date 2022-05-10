@@ -29,6 +29,12 @@ export class LoginComponent implements OnInit {
     },error=> console.log(error),()=>console.log("done"))
 
 
+if(result=="condition") {
+
+}else {
+
+}
+	
     */
     if(login.email=="raj@gmail.com" && login.password=="123"){
       sessionStorage.setItem("user","raj@gmail.com");
