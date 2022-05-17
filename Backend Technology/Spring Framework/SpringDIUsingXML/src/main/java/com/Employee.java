@@ -4,12 +4,23 @@ public class Employee {
 private int id;
 private String name;
 private float salary;
+private Address add;
 
 	Employee() {
 		System.out.println("Object created...");
 	}
 	
 	
+	public Address getAdd() {
+		return add;
+	}
+
+
+	public void setAdd(Address add) {
+		this.add = add;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -53,7 +64,7 @@ private float salary;
 	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", add=" + add + "]";
 	}
 	
 	
