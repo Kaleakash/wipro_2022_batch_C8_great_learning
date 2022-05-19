@@ -16,15 +16,15 @@ public class DemoTest {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
 		EmployeeService es = (EmployeeService)ac.getBean("employeeService");
 					
-//		List<Employee> listOfEmp = es.getAllEmployee();
-//		listOfEmp.forEach(emp->System.out.println(emp));
+		List<Employee> listOfEmp = es.getAllEmployee();
+		listOfEmp.forEach(emp->System.out.println(emp));
 		
-		Employee emp = (Employee)ac.getBean("employee");
-		emp.setId(102);
-		emp.setName("Balaji");
-		emp.setSalary(45000);
-		String result  = es.storeEmployee(emp);
-		System.out.println(result);
+//		Employee emp = (Employee)ac.getBean("employee");
+//		emp.setId(108);
+//		emp.setName("Dinesh");
+//		emp.setSalary(49000);
+//		String result  = es.storeEmployee(emp);
+//		System.out.println(result);
 	}
 
 }
