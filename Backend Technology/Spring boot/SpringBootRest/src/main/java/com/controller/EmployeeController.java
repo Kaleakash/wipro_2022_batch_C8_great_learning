@@ -55,10 +55,24 @@ public class EmployeeController {
 	public String queryParam(@RequestParam("name") String name) {
 		return "Welcome user to query param "+name;
 	}
+	
+	// http://localhost:9090/query?name=Ravi&pass=123s
+		@RequestMapping(value = "query")
+		public String queryParamMultiple(@RequestParam("name") String name,@RequestParam("pass") String pass) {
+			return "Welcome user to query param "+name;
+		}
+		
 	// http://localhost:9090/path/Ravi
 	
 	@RequestMapping(value = "path/{name}")
 	public String pathParam(@PathVariable("name") String name) {
 		return "Welcome user to path param "+name;
 	}
+	
+	// http://localhost:9090/path/Ravi/123
+	
+		@RequestMapping(value = "path/{name}/{pass}")
+		public String pathParamMultiple(@PathVariable("name") String name,@PathVariable("pass") String pass) {
+			return "Welcome user to path param "+name;
+		}
 }
