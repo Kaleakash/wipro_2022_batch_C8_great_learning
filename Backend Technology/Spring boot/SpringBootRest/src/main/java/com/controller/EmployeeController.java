@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -57,7 +59,7 @@ public class EmployeeController {
 	}
 	
 	// http://localhost:9090/query?name=Ravi&pass=123s
-		@RequestMapping(value = "query")
+		@RequestMapping(value = "queryMultiple")
 		public String queryParamMultiple(@RequestParam("name") String name,@RequestParam("pass") String pass) {
 			return "Welcome user to query param "+name;
 		}
@@ -71,8 +73,35 @@ public class EmployeeController {
 	
 	// http://localhost:9090/path/Ravi/123
 	
-		@RequestMapping(value = "path/{name}/{pass}")
+		@RequestMapping(value = "pathMultiple/{name}/{pass}")
 		public String pathParamMultiple(@PathVariable("name") String name,@PathVariable("pass") String pass) {
 			return "Welcome user to path param "+name;
 		}
+		// http://localhost:9090/postMethod 
+		@RequestMapping(value = "postMethod",method = RequestMethod.POST)
+		public String testPostMethod() {
+			return "Welcome to Post method ";
+		}
+		
+		// http://localhost:9090/storeEmployee
+		@RequestMapping(value = "storeEmployee",consumes = MediaType.APPLICATION_JSON_VALUE,
+				method = RequestMethod.POST)
+		public String storeEmployeeInfo(@RequestBody Employee emp) {
+			System.out.println(emp);
+			return "Welcome Mr "+emp.getName();
+		}
+
+		// http://localhost:9090/updateEmployee
+		@RequestMapping(value = "updateEmployee",consumes = MediaType.APPLICATION_JSON_VALUE,
+				method = RequestMethod.PUT)
+		public String updateEmployeeInfo(@RequestBody Employee emp) {
+			System.out.println(emp);
+			return "Welcome Mr "+emp.getName()+" for update method ";
+		}
+		// http://localhost:9090/deleteEmployee/100
+		@RequestMapping(value = "deleteEmployee/{id}",method = RequestMethod.DELETE)
+		public String deleteEmployee(@PathVariable("id") int id) {
+			return "Employee record deleted with id as "+id;
+		}
 }
+
