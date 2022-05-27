@@ -45,5 +45,9 @@ public Product() {
 	super();
 	// TODO Auto-generated constructor stub
 }
+@Override
+public String toString() {
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + ", url=" + url + "]";
+}
 
 }

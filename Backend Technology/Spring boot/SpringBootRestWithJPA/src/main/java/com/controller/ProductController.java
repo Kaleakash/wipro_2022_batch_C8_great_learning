@@ -1,7 +1,10 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,4 +26,26 @@ public class ProductController {
 	public String storeProduct(@RequestBody Product product) {
 			return productService.storeProdcut(product);
 	}
+	
+	// http://localhost:8080/allProduct
+	@RequestMapping(value = "allProduct",produces = MediaType.APPLICATION_JSON_VALUE,
+			method = RequestMethod.GET)
+	public List<Product> getAllProduct() {
+		return productService.getAllProduct();
+	}
+	
+		// http://localhost:8080/updateProduct
+		@RequestMapping(value = "updateProduct",
+				consumes = MediaType.APPLICATION_JSON_VALUE,
+				method=RequestMethod.PUT)
+		public String updateProduct(@RequestBody Product product) {
+				return productService.updateProduct(product);
+		}
+		
+		// http://localhost:8080/deleteProduct/100
+		
+		@RequestMapping(value = "deleteProduct/{pid}",method = RequestMethod.DELETE)
+		public String deleteProductInfo(@PathVariable("pid") int pid) {
+			return productService.deleteProductInfo(pid);
+		}
 }
