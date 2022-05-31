@@ -284,6 +284,15 @@ this dependency provide the ui
     <version>2.10.5</version>
 </dependency>
 
+swagger 3 
+
+	<dependency>
+    		<groupId>org.springdoc</groupId>
+    		<artifactId>springdoc-openapi-ui</artifactId>
+    		<version>1.6.4</version>
+	</dependency>
+
+
 
 Eureka Server application.properties 
 

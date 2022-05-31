@@ -48,4 +48,6 @@ public class ProductController {
 		public String deleteProductInfo(@PathVariable("pid") int pid) {
 			return productService.deleteProductInfo(pid);
 		}
+		
+		public 
 }

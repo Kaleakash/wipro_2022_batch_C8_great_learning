@@ -50,4 +50,12 @@ public class ProductService {
 			return "Product didn't delete";
 		}
 	}
+	
+	public List<Product> findProductByPrice(float price){
+		return productRepository.findProductByPrice(price);
+	}
+	
+	public List<Product> sortProductByPrice(){
+		return productRepository.sortByPrice();
+	}
 }
