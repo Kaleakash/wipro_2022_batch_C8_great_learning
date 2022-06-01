@@ -15,4 +15,8 @@ export class ProductService {
   loadAllProductDetails():Observable<Product[]> {
     return this.http.get<Product[]>("http://localhost:8080/products/findAll");
   }
+// by default all HttpClient method return type is json if string then we have to write responseType as text 
+  storeProduct(product:Product):Observable<string>{
+    return this.http.post("http://localhost:8080/products/storeProduct",product,{responseType:'text'})
+  }
 }
