@@ -49,5 +49,5 @@ public class ProductController {
 			return productService.deleteProductInfo(pid);
 		}
 		
-		public 
+ 
 }
