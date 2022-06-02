@@ -1,29 +1,35 @@
 <div>
-    <form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+    <form [formGroup]="productRef">
         <label>PId</label>
-        <input type="number" formControlName="pid"/><br/>
+        <input type="number" formControlName="pid" /><br/>
         <label>PName</label>
         <input type="text" formControlName="pname"/><br/>
         <label>Price</label>
         <input type="number" formControlName="price"/><br/>
         <label>URL</label>
         <input type="url" formControlName="url"/><br/>
-        <input type="submit" value="store product"/>
+        <input type="submit" [value]="buttonName" #b1 (click)="storeProduct(b1)"/>
         <input type="reset" value="reset"/>
     </form>
     <br/>
+    <span style="color:red">{{storeMsg}}</span>
     <table>
         <tr>
             <th>PId</th>
             <th>PName</th>
             <th>Price</th>
             <th>URL</th>
+            <th>Delete</th>
+            <th>Update</th>
         </tr>
         <tr *ngFor="let product of products">
             <td>{{product.pid}}</td>
             <td>{{product.pname}}</td>
             <td>{{product.price}}</td>
             <td><img src={{product.url}} width="100" height="100"/></td>
+            <td><input type="button" value="delete" (click)="deleteRec(product.pid)"/></td>
+            <td><input type="button" value="update" (click)="updateRec(product)"/></td>
         </tr>
     </table>
+    <span style="color:red">{{deleteMsg}}</span>
 </div>
