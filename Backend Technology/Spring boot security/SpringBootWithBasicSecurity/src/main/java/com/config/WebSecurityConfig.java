@@ -15,6 +15,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
+	// NooPasswordEncoder 
 	@Bean
 	@Override
 	protected UserDetailsService userDetailsService() {
@@ -26,6 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		return new InMemoryUserDetailsManager(listOfUser);
 	}
 
+	
 	
 	
 }
