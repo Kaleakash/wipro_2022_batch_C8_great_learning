@@ -45,10 +45,10 @@ public class JwtUtil {
 
 		Collection<? extends GrantedAuthority> roles = userDetails.getAuthorities();
 
-		if (roles.contains(new SimpleGrantedAuthority("ROLE_ADMIN"))) {
+		if (roles.contains(new SimpleGrantedAuthority("role_admin"))) {
 			claims.put("isAdmin", true);
 		}
-		if (roles.contains(new SimpleGrantedAuthority("ROLE_USER"))) {
+		if (roles.contains(new SimpleGrantedAuthority("role_user"))) {
 			claims.put("isUser", true);
 		}
 		

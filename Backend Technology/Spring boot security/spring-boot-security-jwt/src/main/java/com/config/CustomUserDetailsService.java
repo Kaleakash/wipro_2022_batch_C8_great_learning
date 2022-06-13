@@ -25,6 +25,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	private PasswordEncoder bcryptEncoder;
 	
+	
+	
+	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		List<SimpleGrantedAuthority> roles = null;	
